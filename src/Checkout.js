@@ -44,10 +44,12 @@ function Checkout() {
 
         }
       </div>
-
-      <div className="checkout__right">
-        <Subtotal />
-      </div>
+        {basket.length > 0 && (
+           <div className="checkout__right">
+            <Subtotal />
+           </div>
+        )
+        }
     </div>
   );
 }
